@@ -60,7 +60,7 @@
     
     void main(void)
     {
-		vec2 simplexVec = vec2(0.5*u_time, position);
+		vec2 simplexVec = vec2(0.25*u_time, position);
         float s_contrib = simplexNoise(simplexVec);
         float t_contrib = simplexNoise(vec2(s_contrib,0.25*u_time));
         height = s_contrib*t_contrib;
